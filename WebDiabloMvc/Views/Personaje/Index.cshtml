@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Personaje>
+
+@{
+    ViewData["Title"] = "Paginas Personajes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tabla de Personajes Diablo</h1>
+</div>
+
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Clase</th>
+            <th scope="col">Level</th>
+            <th scope="col">Xp</th>
+            <th scope="col">Vida</th>
+            <th scope="col">Mana</th>
+        </tr>
+    </thead>
+    <body>
+        @foreach (var personaje in Model)
+        {
+            <tr>
+                <td>@personaje.Persj_Nombre</td>
+                <td>@personaje.Clase.Cls_Nombre</td>
+                <td>@personaje.Persj_Lvl</td>
+                <td>@personaje.Persj_Xp</td>
+                <td>@personaje.Persj_HP</td>
+                <td>@personaje.Persj_Mp</td>
+            </tr>
+        }
+    </body>
+</table>
