@@ -36,12 +36,26 @@ namespace WebDiabloMvc.Controllers
                                     splitOn: "Cls_Id").Distinct().ToList();
             }
 
-            return View(lst);
+            var model = new PersonajeViewModel();
+            model.Personajes = lst;
+            model.DropClases = DropClases();
+            return View(model);
         }
         [HttpPost]
-         public IActionResult Index(MyFiltersPersonaje filtro)
+        public IActionResult Index(MyFiltersPersonaje filtro)
         {
             return View();
+        }
+
+        private IEnumerable<string> DropClases(){
+            IEnumerable<string> nombres = null;
+            using (var db = new SqlConnection(connection_Sql))
+            {
+                var sql = "SELECT Cls_Nombre FROM Clase";
+                nombres = db.Query<string>(sql);
+            }
+
+            return nombres;
         }
     }
 }

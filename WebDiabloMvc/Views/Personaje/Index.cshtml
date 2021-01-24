@@ -1,14 +1,31 @@
-﻿@model IEnumerable<Personaje>
+﻿@model WebDiabloMvc.Models.PersonajeViewModel
 
 @{
     ViewData["Title"] = "Paginas Personajes";
 }
 
+@using (Html.BeginForm("Index","Personaje", FormMethod.Post) ) 
+{
+    <div>
+        <div> 
+            <label> Nombre</label>
+            @Html.EditorFor(Model => Model.Filtro.Filtro_Nombre)
+        </div>
+        <div>    
+            <label>Clase</label>
+            @Html.DropDownListFor(Model => Model.Filtro.Filtro_Clase, new SelectList(Model.DropClases), "--Selected--")
+        </div>
+        <div>
+            <label>Lvl</label>
+            @Html.EditorFor(Model => Model.Filtro.Filtro_Lvl)
+        </div>
+        <input type="submit" value="Filtrar">
+    </div>
+}
+
 <div class="text-center">
     <h1 class="display-4">Tabla de Personajes Diablo</h1>
 </div>
-
-
 
 <table class="table table-striped">
     <thead class="thead-dark">
@@ -21,8 +38,8 @@
             <th scope="col">Mana</th>
         </tr>
     </thead>
-    <body>
-        @foreach (var personaje in Model)
+    <tbody>
+        @foreach (var personaje in Model.Personajes)
         {
             <tr>
                 <td>@personaje.Persj_Nombre</td>
@@ -33,5 +50,5 @@
                 <td>@personaje.Persj_Mp</td>
             </tr>
         }
-    </body>
+    </tbody>
 </table>
