@@ -29,3 +29,10 @@
     background-color:#fff;
     color:#000;
 }
+
+.filtroP-container{
+  position: relative;
+  margin: 2em;
+  text-align: center;
+}
+

@@ -10,6 +10,11 @@ namespace WebDiabloMvc.Models
         public string Filtro_Nombre { get; set; }
         public string Filtro_Clase { get; set; }
         public int Filtro_Lvl { get; set; }
+
+        public MyFiltersPersonaje()
+        {
+            Filtro_Lvl = 0;
+        }
     }
 }
 

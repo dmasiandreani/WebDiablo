@@ -6,16 +6,16 @@
 
 @using (Html.BeginForm("Index","Personaje", FormMethod.Post) ) 
 {
-    <div>
-        <div> 
+    <div class="filtroP-container">
+        <div class="filtroP-Nombre"> 
             <label> Nombre</label>
             @Html.EditorFor(Model => Model.Filtro.Filtro_Nombre)
         </div>
-        <div>    
+        <div class="filtroP-Clase">    
             <label>Clase</label>
             @Html.DropDownListFor(Model => Model.Filtro.Filtro_Clase, new SelectList(Model.DropClases), "--Selected--")
         </div>
-        <div>
+        <div class="filtroP-Lvl">
             <label>Lvl</label>
             @Html.EditorFor(Model => Model.Filtro.Filtro_Lvl)
         </div>
