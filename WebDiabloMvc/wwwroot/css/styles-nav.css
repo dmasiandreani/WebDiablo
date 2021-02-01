@@ -1,0 +1,75 @@
+﻿body {
+  background-color: rgb(223, 138, 138);
+  background-image: url('../img/diablo-p.jpg');
+  background-position: center center;
+  background-repeat:repeat-y;
+}
+.diablo-logo{
+  padding-top: 1em;
+}
+
+[class^="nav"]{
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.nav-barra{
+  background-color: #be675baf;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 55px;
+}
+.nav-container{
+  width: 100%;
+  padding: 0 16px;
+  display: block;
+  border-bottom: solid #cfa65d 1px;
+}
+
+.nav-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 100%;
+}
+[class^="nav"] + a{    
+  background-color: transparent;
+  text-decoration: none;
+  align-self: center;
+  margin: 0 24px 0 0;
+  display:inline-block;
+}
+.nav-left-barra{
+  color: #fff;
+  background-color: rgb(204, 190, 63);
+  align-self: center;
+  margin: 0;
+  margin-left: 8.8em;
+  position: absolute;
+  height: 40px;
+  border-left: 1px solid #686f7a;
+}
+.nav-links{
+  flex: 1 1 auto;
+  align-self: center;
+  display: block;
+  margin: 0;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+}
+.nav-links a{
+  text-decoration: none;
+  font-family:'Noto Serif', serif;
+  font-size: 1.2em;
+  color: #cfa65d;
+  border: solid #cfa65d 1.5px;
+  padding: 0.5em 0.5em 0.5em;
+}
+
+.nav-links a:hover{
+  color: #be675baf;
+  background-color:#cfa65d;
+}

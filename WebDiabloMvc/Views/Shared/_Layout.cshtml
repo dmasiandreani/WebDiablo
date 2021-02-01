@@ -6,25 +6,25 @@
     <title>@ViewData["Title"] - WebDiabloMvc</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/styles-nav.css">
 </head>
 <body>
     <header>
-        <nav class="main_menu">
-            <div class="menu__contain">
-                @* <div>
-                    <a class="nav__link-Img" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img class="nav__Img" alt="logoDiablo" src="~/img/diabloLogo.png" id="logo">
-                    </a>
-                </div> *@
-                <div>
-                    <ul class="nav__list">
-                        <li class="nav__item"><a class="nav__link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-                        <li class="nav__item"><a class="nav__link" asp-area="" asp-controller="Personaje" asp-action="Index">Personajes</a></li>
-                    </ul>
+        <div class="nav-barra">
+        <div class="nav-container">
+            <div class="nav-header">
+                <a href="/">
+                    <img class="diablo-logo" alt="Logotipo de diablo" src="C:\Users\Dmasi\Source\Repos\WebDiablo\WebDiabloMvc\wwwroot\img\diablo-logo2.png">
+                </a>
+                <div class="nav-left-barra"></div>
+                <div class="nav-links">
+                    <a href="#">Inicio</a>
+                    <a href="#">PersonajesBD</a>
+                    <a href="#">APIs</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
